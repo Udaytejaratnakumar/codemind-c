@@ -3,15 +3,13 @@ int main()
 {
     int n;
     scanf("%d",&n);
-    int r=n%10;
+    int large=0,rem;
     while(n)
     {
-        int r1=n%10;
-        if(r1>r)
+        rem=n%10;
+        if(rem>large)
         {
-            r=r1;
-        }
-        n=n/10;
-    }printf("%d",r);
-    
+            large=rem;
+        }n/=10;
+    }printf("%d",large);
 }
