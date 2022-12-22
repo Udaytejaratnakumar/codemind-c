@@ -1,0 +1,50 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int n,d,rev=0,rev1=0,rev2=0,rev3=0,rev4=0;
+    scanf("%d%d",&n,&d);
+    int t=n,x=d,c=0,z=d,r,c1=0;
+    while(t)
+    {
+        c++;
+        r=t%10;
+        rev=rev*10+r;
+        if(c==x){
+            break;
+        }
+        t/=10;
+    }
+    while(rev)
+    {
+        r=rev%10;
+        rev1=rev1*10+r;
+        rev/=10;
+    }
+    while(n)
+    {
+        r=n%10;
+        rev2=rev2*10+r;
+        n/=10;
+    }
+    while(rev2)
+    {
+        c1++;
+        r=rev2%10;
+        rev3=rev3*10+r;
+        if(c1==z)
+        {
+            break;
+        }
+        rev2/=10;
+    }
+    int g,s;
+    if(rev1>rev3)
+    {
+        g=rev1;
+        s=rev3;
+    }else{
+        g=rev3;
+        s=rev1;
+    }printf("%d",g-s);
+}
