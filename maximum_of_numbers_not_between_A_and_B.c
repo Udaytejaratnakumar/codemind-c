@@ -8,30 +8,22 @@ int main()
     {
         scanf("%d",&a[i]);
     }
-    int x,y,c=0,f=1;
+    int x,y,max=a[0],flag=0;
     scanf("%d%d",&x,&y);
-    int max=a[0];
     for(int i=0;i<n;i++)
     {
-        if(a[i]>x && a[i]<y)
-        {
-            c++;
-        }
-        else
+        if(a[i]<x||a[i]>y)
         {
             if(max<a[i])
             {
-            max=a[i];
-              f=0;  
+                max=a[i];
+                flag=1;
             }
         }
-    }
-    if(f==0)
+    }if(flag==1)
     {
-    printf("%d",max);
-    }
-    else if(f==1)
-    {
+        printf("%d",max);
+    }else{
         printf("-1");
     }
 }
