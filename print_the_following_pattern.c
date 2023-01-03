@@ -8,15 +8,11 @@ int main()
         for(int j=1;j<=n-2;j++)
         {
             printf("%d",j);
-            
         }
-         for(int k=1;k<=3;k++)
+        for(int k=n-3;k>0;k--)
         {
             printf("%d",k);
-        }
-  
-    printf("
+        }printf("
 ");
-}
     }
-       
+}
