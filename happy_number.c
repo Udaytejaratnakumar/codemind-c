@@ -1,24 +1,22 @@
 #include<stdio.h>
-int update(int n){
-    int x=0;
-    while(n)
-    {
-        x=x+(n%10)*(n%10);
-        n/=10;
-    }return x;
-}
-
 int main()
 {
-    int n;
+    int n,sum=0;
     scanf("%d",&n);
     while(1){
-     n=update(n);
-    if(n<9)
-    {
-        break;
-    }}
-    if(n==1||n==7)
+        while(n)
+        {
+            int r=n%10;
+            sum=sum+r*r;
+            n/=10;
+        }if(sum>9)
+        {
+            n=sum;
+            sum=0;
+        }else{
+            break;
+        }
+    }if(sum==1||sum==7)
     {
         printf("True");
     }else{
