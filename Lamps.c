@@ -1,9 +1,9 @@
 #include<stdio.h>
 int main()
 {
-    int n,k,x,y;
+    int n,k,x,y,t;
     scanf("%d%d%d%d",&n,&k,&x,&y);
-    int t,b=n-k;
+    int b=n-k;
     if(x<y)
     {
         t=n*x;
